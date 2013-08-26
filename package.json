@@ -1,0 +1,32 @@
+{
+	"name": "collide",
+	"version": "0.0.1",
+	"author": "Websecurify <contact@websecurify.com>",
+	"description": "Library for compating style and script resources.",
+	"license": "MIT",
+	
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/websecurify/node-collide.git"
+	},
+	
+	"keywords": [
+		"node",
+		"css",
+		"less",
+		"javascript",
+		"coffeescript"
+	],
+	
+	"main": "./lib/index.js",
+	
+	"directories": {
+		"lib": "./lib/"
+	},
+	
+	"dependencies": {
+		"coffee-script": "1.6.3",
+		"less": "1.3.3",
+		"async": "0.2.9"
+	}
+}
