@@ -1,6 +1,7 @@
 fs = require 'fs'
 path = require 'path'
 async = require 'async'
+uglify_js = require 'uglify-js'
 coffee_script = require 'coffee-script'
 
 # ---
@@ -24,4 +25,4 @@ module.exports = (scripts, callback) ->
 				
 			bundle.push source
 			
-		return callback null, bundle.join('\n') if callback
+		return callback null, uglify_js.minify(bundle.join('\n'), {fromString: true}).code if callback

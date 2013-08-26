@@ -30,4 +30,4 @@ module.exports = (styles, callback) ->
 		
 		parser.parse bundle.join('\n'), (err, tree) ->
 			return callback err if err
-			return callback null, tree.toCSS() if callback
+			return callback null, tree.toCSS({compress: true}) if callback
