@@ -1,6 +1,6 @@
 {
 	"name": "collide",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "Websecurify <contact@websecurify.com>",
 	"description": "Library for compating style and script resources.",
 	"license": "MIT",
