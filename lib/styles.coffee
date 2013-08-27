@@ -25,9 +25,13 @@ module.exports = (styles, callback) ->
 			bundle.push source
 			
 		parser = new less.Parser {
-			paths: styles.map (style) -> path.dirname(style)
+			paths: module.exports.less_paths.concat styles.map (style) -> path.dirname style
 		}
 		
 		parser.parse bundle.join('\n'), (err, tree) ->
 			return callback err if err
 			return callback null, tree.toCSS({compress: true}) if callback
+			
+# ---
+
+module.exports.less_paths = []
